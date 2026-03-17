@@ -17,7 +17,8 @@
                         <a href="${pageContext.request.contextPath}/admin/manageDoctors" class="nav-link">Doctors</a>
                     </li>
                     <li class="nav-item">
-                        <a href="${pageContext.request.contextPath}/admin/logout" class="nav-link btn btn-danger">Logout</a>
+                        <a href="${pageContext.request.contextPath}/admin/logout" class="nav-link btn btn-danger
+                        ">Logout</a>
                     </li>
                 </ul>
             </div>

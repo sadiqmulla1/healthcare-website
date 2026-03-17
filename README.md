@@ -62,14 +62,20 @@ Import the project into:
 
 as a **Maven project**.
 
-### 3. Configure Database
+
+### 3. Start MySQL (XAMPP)
+
+- Open XAMPP Control Panel
+- Start **Apache** (optional) and **MySQL**
+
+### 4. Configure Database
 
 Update database settings in:
 src/main/resources/application.properties
 
-### 4. Deploy to Tomcat
+### 5. Deploy to Tomcat
 
 Run the project using **Apache Tomcat**.
 
-### 5. Open in Browser
+### 6. Open in Browser
 http://localhost:8080/sample-healthcare
