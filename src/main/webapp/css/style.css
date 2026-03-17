@@ -1,0 +1,270 @@
+* {
+  font-family: "Inter";
+}
+
+
+.doctors-carousel-container {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.doctors-carousel-container .carousel-inner {
+  padding: 1em;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.doctors-carousel-container .card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  flex: 0 0 calc(33.333% - 1em);
+}
+
+.doctors-carousel-container .carousel-control-prev,
+.doctors-carousel-container .carousel-control-next {
+  background-color: #e1e1e1;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  z-index: 1;
+}
+
+.doctors-carousel-container .carousel-control-prev {
+  left: -3vh;
+}
+
+.doctors-carousel-container .carousel-control-next {
+  right: -3vh;
+}
+
+.doctors-carousel-container .card .img-wrapper {
+  max-width: 100%;
+  height: 13em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.doctors-carousel-container .card img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .doctors-carousel-container {
+    width: 100%;
+  }
+
+  .doctors-carousel-container .card {
+    flex: 0 0 100%;
+  }
+
+  .doctors-carousel-container .card .img-wrapper {
+    height: 17em;
+  }
+
+  .doctors-carousel-container .carousel-control-prev {
+    left: 10px;
+  }
+
+  .doctors-carousel-container .carousel-control-next {
+    right: 10px;
+  }
+}
+
+.carousel-inner {
+  display: flex;
+  overflow: hidden;
+}
+
+.doctor-card {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  box-sizing: border-box;
+}
+
+.doctor-img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.transition {
+  transition: transform 0.4s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .doctor-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .doctor-card {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+#doctorCarouselInner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.doctor-card {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.doctor-img {
+  height: 220px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .doctor-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .doctor-card {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+.doctor-card {
+  max-width: 300px;
+}
+
+.doctor-img {
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.doctors-section {
+  background-color: #fff;
+  color: #000;
+}
+
+.doctor-card .card {
+  background-color: white;
+}
+
+.doctor-card:hover .card-title {
+  color: #0d6efd; /* Bootstrap primary blue - change to your preferred color */
+}
+
+
+/* Gallery */
+.gallery {
+  background-color: #dbddf1;
+  padding: 80px 0;
+}
+.gallery img {
+  background-color: #ffffff;
+  padding: 15px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+#gallery-modal .modal-img {
+  width: 100%;
+}
+
+/* admin login form */
+@media (min-width: 992px) {
+  .login-container {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+/* manage_photos upload form */
+@media (min-width: 992px) {
+  .form-container {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+/*Doctor cards new way*/
+    /* Fixed sizing for the doctor cards in the carousel */
+    .custom-card {
+      height: 400px; /* Adjust height as needed */
+      width: 300px;  /* Adjust width as needed */
+      cursor: pointer;
+      background-color: #000;
+    }
+
+    /* Image Zoom Effect */
+    .custom-card .card-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .custom-card:hover .card-img {
+      transform: scale(1.2) rotate(2deg);
+    }
+
+ /* Gradient Overlay - Fixed Visibility */
+ .card-overlay {
+   position: absolute;
+   inset: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   /* Change to start so text stays at the top of the overlay div */
+   justify-content: flex-start;
+   /* Add padding-top so the name is visible when the box is slid down */
+   padding-top: 2.5rem;
+   background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.9) 100%);
+   transition: all 0.5s ease;
+   /* Adjust this percentage until the name sits perfectly */
+   transform: translateY(75%);
+ }
+
+ .custom-card:hover .card-overlay {
+   transform: translateY(0);
+   /* Full cover gradient on hover */
+   background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%);
+   justify-content: center;
+   padding-top: 0;
+ }
+
+ /* Ensure the title is always sharp and white */
+ .card-overlay h2 {
+   margin-bottom: 0.5rem;
+   z-index: 2;
+ }
+
+    /* Hide details until hover */
+    .card-text {
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      margin-top: 10px;
+    }
+
+    .custom-card:hover .card-text {
+      opacity: 1;
+    }
+
+    /* Carousel button visibility over dark cards */
+    .carousel-control-prev, .carousel-control-next {
+      opacity: 0.8;
+    }
